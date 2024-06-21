@@ -130,7 +130,7 @@ def register():
                         )
                     db_session.add(user)
                     db_session.commit()
-                    print('Your register done succesfully.')
+                    print('Your register done successfully.')
                     return redirect(url_for('login'))
             else:
                 print('Passwords are not match.')
