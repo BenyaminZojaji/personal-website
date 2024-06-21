@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}{% endblock %}
+    
+  </head>
+
+  <body>
+    <nav class="route-tab-bar">
+        <a href="/home">Home</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
+        <a href="/blog">Blog</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    {% block script %}
+    {% endblock %}
+  </body>
+</html>
