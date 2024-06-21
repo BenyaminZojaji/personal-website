@@ -1,34 +1,88 @@
 {% extends "layout.html" %} {% block title %} Register {% endblock title %} {%
-    block content %}
-    {% block css %}
-    <link rel="stylesheet" href="static/css/style-login.css">
-    {% endblock css %}
-    <div class="main">
-      <h1>Register</h1>
-      <h3>Enter your login credentials</h3>
-      <form action="">
-        <label for="first"> Username: </label>
-        <input
-          type="text"
-          id="first"
-          name="first"
-          placeholder="Enter your Username"
-          required
-        />
+block css %}
+<link rel="stylesheet" href="static/css/style-login.css" />
+{% endblock css %} {% block content %}
+<form method="post">
+  <div class="main">
+    <br><br><br><br>
     
-        <label for="password"> Password: </label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter your Password"
-          required
-        />
-    
-        <div class="wrap">
-          <button type="submit" onclick="solve()">Submit</button>
-        </div>
-      </form>
-    </div>
-    {% endblock content %}
-    
+    <form action="">
+      <label for="first_name"> First name: </label>
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        required
+      />
+
+      <label for="last_name"> Last name: </label>
+      <input
+        type="text"
+        id="last_name"
+        name="last_name"
+        required
+      />
+
+      <label for="country"> Country: </label>
+      <input
+        type="text"
+        id="country"
+        name="country"
+        required
+      />
+
+      <label for="city"> City: </label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        required
+      />
+
+      <label for="age"> Age: </label>
+      <input
+        type="text"
+        id="age"
+        name="age"
+        required
+      />
+
+      <label for="username"> Username: </label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+      />
+
+      <label for="email"> Email: </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+      />
+
+      <label for="password"> Password: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      />
+
+      <label for="confirm_password"> Confirm password: </label>
+      <input
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        required
+      />
+
+      <div class="wrap">
+        <button type="submit" onclick="solve()">Submit</button>
+      </div>
+    </form>
+  </div>
+</form>
+{% endblock content %}
