@@ -4,6 +4,15 @@ block css %}
 {% endblock css %} {% block content %}
 <form method="post">
   <div class="main">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}" role="alert">
+            {{ message }}
+          </div>        
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
     <h1>Login</h1>
     <h3>Enter your login credentials</h3>
     <form action="">
